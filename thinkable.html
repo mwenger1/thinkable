@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>think/able - Michael J. Fox is Back</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="The Michael J. Fox Foundation - Thinkable"/>
+	<meta property="og:image" content="http://www.michaeljfox.org/images/thinkableManifesto.jpg"/>
+	<meta property="og:url" content="http://www.michaeljfox.org/thinkableLanding/thinkable.html"/>
+	<meta property="og:site_name" content="The Michael J. Fox Foundation - Think/Able"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="think/able is a community of people aligned around the goal of finding a cure for Parkinson’s disease in our lifetime. Join us!" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/thinkable-styles.css" rel="stylesheet" media="screen">
+	<link href="fancybox/fancybox.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+	<script>
+	  WebFont.load({
+	    google: {
+	      families: ['Roboto']
+	    }
+	  });
+	</script>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <!-- INITITALIZE FACEBOOK -->
+
+	<div id="fb-root"></div>
+	<script type="text/javascript">
+	  window.fbAsyncInit = function() {
+	    // init the FB JS SDK
+	    FB.init({
+	      appId      : '160939607355547', // App ID from the App Dashboard
+	      channelUrl : 'https://www.michaeljfox.org/channel.html', // Channel File for x-domain communication
+	      status     : true, // check the login status upon init?
+	      cookie     : true, // set sessions cookies to allow your server to access the session?
+	      xfbml      : true  // parse XFBML tags on this page?
+	    });
+
+	    // Additional initialization code such as adding Event Listeners goes here
+
+	  };
+
+	  // Load the SDK's source Asynchronously
+	  // Note that the debug version is being actively developed and might
+	  // contain some type checks that are overly strict.
+	  // Please report such bugs using the bugs tool.
+	  (function(d, debug){
+	     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement('script'); js.id = id; js.async = true;
+	     js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+	     ref.parentNode.insertBefore(js, ref);
+	   }(document, /*debug*/ false));
+	</script>
+
+    <div id="introContainer">
+
+    	<div id="intro" class="container">
+    		<div id="introBranding" class="row">
+	    		<div id="logo" class="col-xs-12 col-md-3"><img src="images/logoIntro.png"></div>
+	    		<div id="tagline" class="col-xs-12 col-md-5 col-md-offset-4"><p class="pull-right">A project of <a href="https://www.michaeljfox.org/" target="_blank">The Michael J. Fox Foundation <img src="images/foxIntro.png" height="17" width="39"></a></p></div>
+    		</div>
+    		<div id="introMain" class="row">
+    			<div class="col-xs-12 col-md-6">
+    				<h1>Our challenges don't<br/>define us. Our actions do.</h1>
+    				<p>Think/able is a community of people aligned around the goal of finding a cure for Parkinson's disease in our lifetime.</p>
+    				<p><a id="takeAction" class="redBtn" href="javascript:;" onclick="scrollToElement('#messageContainer');">Take action <span class="glyphicon glyphicon-arrow-down"></span></a></p>
+    			</div>
+    			<div id="introPromo" class="col-xs-12 col-md-3 col-md-offset-3">
+    				<h2>Michael's back on September 26!</h2>
+					<p style="margin: 1em 0;">Host a premiere party for<br/>The Michael J. Fox Show</p>
+					<a id="hostParty" class="btn-block redBtn" href="javascript:;" onclick="scrollToElement('#hostContainer');">Host a Party <span class="glyphicon glyphicon-arrow-down"></span></a>
+    			</div>
+    		</div>
+    	</div>
+		<div id="navContainer" class="container">
+	    	<nav class="navbar navbar-default" role="navigation">
+	    		<div class="navbar-header">
+				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				      <span class="sr-only">Toggle navigation</span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				    </button>
+				    <a class="visible-xs navbar-brand" href="#">Menu</a>
+				  </div>
+				  <div class="collapse navbar-collapse navbar-ex1-collapse">
+				   <ul class="nav nav-justified">
+<!-- 				  <li><a id="navAboutLink" href="javascript:;" onclick="scrollToElement('#aboutContainer');">about</a></li> -->
+				      <li><a id="navActionLink" href="javascript:;" onclick="scrollToElement('#messageContainer');">message michael</a></li>
+				      <li><a id="navPartLink" href="javascript:;" onclick="scrollToElement('#participate');">share</a></li>
+				      <li><a id="navHostLink" href="javascript:;" onclick="scrollToElement('#hostContainer');">host a party</a></li>
+				      <li><a id="navManLink" href="javascript:;" onclick="scrollToElement('#manifestoContainer');">what we believe</a></li>
+				      <li><a class="home" href="javascript:;" onclick="scrollToElement('#introContainer');">back to top</a></li>
+				      <li><a id="joinLink">join<span class="glyphicon glyphicon-plus"></span></a></li>
+				    </ul>
+				  </div>
+	    	</nav>
+	    	<div id="joinForm">
+	    		<div class="row">
+	    			<div class="col-12">
+	    				<form id="joinFormSubmit" class="luminateApi survey-form form-inline" method="POST" action="http://www2.michaeljfox.org/site/CRSurveyAPI" data-luminateApi='{"callback": "submitSurveyCallback", "requiresAuth": "true"}'>
+				        <input type="hidden" name="method" value="submitSurvey">
+				        <input type="hidden" name="survey_id" value="3140">
+				        <div class="col-xs-12 col-md-9">
+				          <input id="cons_email" type="email" class="col-xs-12 col-md-9" name="cons_email" placeholder="Enter email address">
+				        </div>
+				        <input type="hidden" name="cons_email_opt_in" value="true">
+
+				        <div class="form-actions col-xs-12 col-md-3">
+				          <button type="submit" class="joinBtn">Sign Me Up <span class="glyphicon glyphicon-chevron-right"></span></button>
+				        </div>
+				      </form>
+	    			</div>
+	    		</div>
+	    	</div>
+		</div>
+
+    </div>
+    <a name="top"></a>
+    <div id="messageContainer">
+    	<div id="message" class="container">
+    		<div class="row">
+	    		<div class="col-xs-12 col-md-5 col-md-offset-7">
+	    			<a id="action"></a>
+	    			<h2>Send a message to Michael</h2>
+	    			<p>
+	    				Michael J. Fox lives a life of optimism and determination.
+	    				From seeking a cure for Parkinson's to returning to TV with
+	    				his own sitcom "The Michael J. Fox Show," he knows that if
+	    				you focus on what's possible and think/able, you can achieve greatness.
+	    				Do you believe in the power of optimism and action for achieving your goals?
+	    			</p>
+	    			<p><strong style="font-size: 0.8em;">Sign below and we'll deliver your messages in a book to Michael at the Foundation's benefit gala on Nov. 9</strong></p>
+	    		</div>
+    		</div>
+    		<div id="messageForm" class="row">
+    			<form id="msgForm" class="luminateApi msg-form col-xs-12 col-md-5 col-md-offset-7" role="form" method="POST" action="http://www2.michaeljfox.org/site/CRSurveyAPI" data-luminateApi='{"callback": "submitMsgCallback", "requiresAuth": "true"}'>
+    				<input type="hidden" name="method" value="submitSurvey">
+				    <input type="hidden" name="survey_id" value="3121">
+    				<div class="form-group">
+    					<input id="cons_email" name="cons_email" class="form-control" type="email" placeholder="Enter your email (required)">
+    				</div>
+    				<div class="form-group">
+    					<textarea name="question_3740" class="form-control" rows="4" placeholder="Click here to type your message to Michael (limit 250 characters)..."></textarea>
+    				</div>
+    				<div class="form-group">
+    					<select id="msgSelect" name="question_3580" class="form-control">
+    						<option value="">Connected to Parkinson's (PD)?</option>
+							<option>Family Member had PD</option>
+							<option>Family Member has PD</option>
+							<option>Friend had PD</option>
+							<option>Friend has PD</option>
+							<option>I have PD</option>
+							<option>I work with the PD Community</option>
+							<option>Other</option>
+						</select>
+    				</div>
+    				<input type="hidden" name="question_3562" value="1482" />
+					<input type="hidden" name="question_3562" value="1501" />
+    				<div class="row">
+    					<div class="col-xs-12 col-md-6">
+    						<p id="msgCounter" class="form-control-static"><span class="glyphicon glyphicon-ok"></span> <span id="msgCounterNum"></span> sent</p>
+    					</div>
+    					<div class="col-xs-12 col-md-4 col-md-offset-2">
+    						<button type="submit" class="redBtn pull-right">Send <span class="glyphicon glyphicon-chevron-right"></span></button>
+    					</div>
+    				</div>
+    			</form>
+    		</div>
+    	</div>
+    	<div id="msgThanks" class="container" style="display:none;">
+	    	<div class="row">
+		    	<div class="col-xs-12 col-md-5 col-md-offset-7">
+	    			<a id="action"></a>
+	    			<h2>Thank you for signing</h2>
+	    			<p class="divider-bottom">
+	    			   We can't wait to share your message with Michael.
+	    			</p>
+	    			<p class="divider-top"><strong>Please help us spread the word!</strong></p>
+	    			<p>Tell your friends who think/able that they can share their message with Michael, too.</p>
+	    			<ul class="list-inline">
+						<li><a id="msgThanksFB"><img src="images/fb_icon_sq.png" alt="share on facebook"</a></li>
+						<li><a class="popup" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.michaeljfox.org%2Fthinkable&amp;text=I%27m%20telling%20%23michaeljfox%20that%20I%20%23ThinkAble.%20Join%20me%20and%20share%20your%20message%20with%20Michael%20www.michaeljfox.org%2Fthinkable"><img src="images/tw_icon_sq.png" alt="tweet this"</a></li>
+						<li><a href="mailto:email@domain.com?subject=Join me in sending a message to Michael J. Fox&body=Dear%20friend%2C%0A%0AThis%20fall%2C%20Michael%20J.%20Fox%20is%20returning%20to%20television%20for%20%E2%80%9CThe%20Michael%20J.%20Fox%20Show.%E2%80%9D%20This%20is%20an%20historic%20moment%20for%20optimists%20everywhere%20and%20an%20important%20reminder%20of%20what%20we%20can%20achieve%20when%20we%20focus%20on%20what%E2%80%99s%20possible%20and%20think%2Fable.%0A%0AThat%E2%80%99s%20why%20I%E2%80%99m%20coming%20together%2C%20with%20others%20like%20me%20and%20the%20Michael%20J.%20Fox%20Foundation%2C%20to%20show%20my%20support%20and%20affirm%20Michael%E2%80%99s%20belief%20in%20the%20power%20of%20optimism%20and%20action%20for%20achieving%20our%20goals.%0A%0AWill%20you%20join%20me%20by%20sending%20a%20message%20to%20Michael%3F%20http%3A%2F%2Fwww.michaeljfox.org%2FThinkAble%0A%0AYour%20message%20will%20be%20delivered%20to%20Michael%20at%20The%20Michael%20J.%20Fox%20Foundation%20benefit%20gala%20on%20November%209th.%0A%20%0AThank%20you!"><img src="images/email_icon_sq.png" alt="share with email"></a></li>
+					</ul>
+				</div>
+	    	</div>
+    	</div>
+    </div>
+    <a id="participate"></a>
+    <div id="convoContainer">
+    	<div id="convo" class="container">
+    		<div id="convoHead" class="row">
+    			<h2>Join the Conversation</h2>
+    			<p class="subHead">Tell us why you #ThinkAble using the hashtag on Twitter, Instagram, or Facebook &mdash; or share a message below.</p>
+    		</div>
+    		<div class="row">
+    			<div class="col-xs-12 col-md-6">
+    				<a class="twitter-timeline" href="https://twitter.com/search?q=%23ThinkAble" data-widget-id="377786263979323393">Tweets about "#ThinkAble"</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    			</div>
+    			<div class="col-xs-12 col-md-6">
+    				<div class="shareUnit">
+    					<p>#MichaelJFox's return to TV reminds us: Our challenges don't define us. Our actions do. #ThinkAble bit.ly/ThinkAble</p>
+    					<div class="sharing"><a class="popup" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/photo.php?fbid=10151847426208540&set=pb.135341373539.-2207520000.1379000877.&type=3&theater" id="promo1" ><img src="images/icon_fb_convo.png" alt="share on facebook"></a>&nbsp;&nbsp;<a class="popup" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.michaeljfox.org%2Fthinkable&amp;text=%23MichaelJFox%27s%20return%20to%20TV%20reminds%20us%3A%20Our%20challenges%20don%27t%20define%20us.%20Our%20actions%20do.%20%23ThinkAble%20bit.ly%2FThinkable"><img src="images/icon_tw_convo.png" alt="tweet this"></a></div>
+    				</div>
+    				<div class="shareUnit">
+    					<p>94% of U.S. adults think their outlook affects their health. Together we'll make Parkinson's cure/able. #ThinkAble bit.ly/ThinkAble</p>
+    					<div class="sharing"><a class="popup" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/photo.php?fbid=10151847434308540&set=pb.135341373539.-2207520000.1379000877.&type=3&theater" id="promo2"><img src="images/icon_fb_convo.png" alt="share on facebook"></a>&nbsp;&nbsp;<a class="popup" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.michaeljfox.org%2Fthinkable&amp;text=94%25%20of%20U.S.%20adults%20think%20their%20outlook%20affects%20their%20health.%20Together%20we%27ll%20make%20Parkinson%27s%20cure%2Fable.%20%23ThinkAble%20bit.ly%2FThinkable"><img src="images/icon_tw_convo.png" alt="tweet this"></a></div>
+    				</div>
+    				<div class="shareUnit">
+    					<p>I got to a place where all signs said stop and just thought... why stop? -#MichaelJFox reminding us to #ThinkAble bit.ly/ThinkAble</p>
+    					<div class="sharing"><a class="popup" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/photo.php?fbid=10151847442438540&set=pb.135341373539.-2207520000.1379000877.&type=3&theater" id="promo3"><img src="images/icon_fb_convo.png" alt="share on facebook"></a>&nbsp;&nbsp;<a class="popup" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.michaeljfox.org%2Fthinkable&amp;text=I%20got%20to%20a%20place%20where%20all%20signs%20said%20stop%20and%20just%20thought...%20why%20stop%3F%20-%23MichaelJFox%20reminding%20us%20to%20%23ThinkAble%20bit.ly%2FThinkable"><img src="images/icon_tw_convo.png" alt="tweet this"></a></div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div id="hostContainer">
+    	<div id="host" class="container">
+	    	<div class="row">
+	    		<div id="hostFormContent" class="col-xs-12 col-md-5">
+	    			<h2>Host a Premiere Party for the Show</h2>
+	    			<p>
+	    				To celebrate Michael's return to TV, we're inviting people to host a party for "The Michael J. Fox Show" premiere (US: September 26 9/8c).
+	    			</p>
+	    			<p>
+	    				Sign up to receive a party kit to make your party great.
+	    			</p>
+	    			<form id="hostForm" class="luminateApi host-form" role="form" method="POST" action="http://www2.michaeljfox.org/site/CRSurveyAPI" data-luminateApi='{"callback": "submitHostCallback", "requiresAuth": "true"}'>
+	    			<input type="hidden" name="method" value="submitSurvey">
+				    <input type="hidden" name="survey_id" value="3181">
+	    				<div class="row">
+		    				<div class="col-xs-12 col-md-12">
+		    					<input class="form-control" id="cons_email" name="cons_email" type="email" placeholder="Enter Your Email (required)">
+		    				</div>
+	    				</div>
+	    				<div class="row">
+	    					<div class="col-xs-12 col-md-6">
+		    					<input class="form-control" id="cons_first_name" name="cons_first_name" type="text" placeholder="First Name">
+	    					</div>
+	    					<div class="col-xs-12 col-md-6">
+		    					<input class="form-control" id="cons_last_name" name="cons_last_name" type="text" placeholder="Last Name">
+	    					</div>
+	    				</div>
+	    				<div class="row">
+	    					<div class="col-xs-12 col-md-12">
+		    					<input class="form-control" id="cons_zip_code" name="cons_zip_code" type="text" placeholder="Zip Code">
+	    					</div>
+	    				</div>
+	    				<div class="row">
+							<div class="col-lg-12">
+								<select name="question_3624" id="hostSelect" class="form-control">
+		    						<option value="">Connected to Parkinson's (PD)?</option>
+									<option>Family Member had PD</option>
+									<option>Family Member has PD</option>
+									<option>Friend had PD</option>
+									<option>Friend has PD</option>
+									<option>I have PD</option>
+									<option>I work with the PD Community</option>
+									<option>Other</option>
+		    					</select>
+							</div>
+	    				</div>
+
+	    				<input type="hidden" name="question_3625" id="3953_3162_3_3621_1" value="1481" />
+						<input type="hidden" name="question_3625" id="3953_3162_3_3621_2" value="1482" />
+	    				<div class="row">
+	    					<div class="col-xs-12">
+	    						<button type="submit" value="Submit" class="redBtn pull-right">Submit <span class="glyphicon glyphicon-chevron-right"></span></button>
+	    					</div>
+	    				</div>
+	    			</form>
+	    		</div>
+
+		    	<div id="hostThanks" class="col-xs-12 col-md-5" style="display:none;">
+					<a id="action"></a>
+					<h2>Thank you for being a party host</h2>
+					<p class="divider-bottom">
+					   Check your email for more details.
+					</p>
+					<p class="divider-top"><strong>Please help us spread the word!</strong></p>
+					<p>Invite your friends to host a party too.</p>
+					<ul class="list-inline">
+						<li><a class="popup" href="https://www.facebook.com/dialog/feed?app_id=160939607355547&caption=www.michaeljfox.org%2Fthinkable&description=On%20Thursday%2C%20September%2026%2C%20Michael%20returns%20to%20television%20on%20NBC's%20The%20Michael%20J.%20Fox%20Show.%20To%20celebrate%2C%20The%20Michael%20J.%20Fox%20Foundation%20is%20inviting%20people%20across%20the%20country%20to%20throw%20a%20premiere%20party.&display=popup&e2e=%7B%7D&link=http%3A%2F%2Fbit.ly%2F16hF4Hv&locale=en_US&name=Celebrate%20Michael%20J.%20Fox's%20return%20to%20TV.&next=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D27%23cb%3Df169c6901%26domain%3Dwww2.michaeljfox.org%26origin%3Dhttp%253A%252F%252Fwww2.michaeljfox.org%252Ff1b4fc7bf8%26relation%3Dopener%26frame%3Df293c80168%26result%3D%2522xxRESULTTOKENxx%2522&picture=http%3A%2F%2Fwww2.michaeljfox.org%2Fimages%2Fmjff_FB.jpg&sdk=joey"id="hostThanksFB"><img src="images/fb_icon_sq.png" alt="share on facebook"></a></li>
+						<li><a class="popup" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.michaeljfox.org%2Fthinkable&text=Celebrate%20%23MichaelJFox’s%20return%20to%20TV.%20Host%20a%20premiere%20party%20with%20%40MichaelJFoxOrg%3Ahttp%3A%2F%2Fbit.ly%2F14GI2Bq"><img src="images/tw_icon_sq.png" alt="tweet this"></a></li>
+					</ul>
+				</div>
+
+	    		<div id="counterContainer" class="col-xs-12 col-md-7">
+	    			<h3 id="partyCounter" class="counter">
+	    			<br/><span class="subhead">Parties Coast to Coast</span></h3>
+	    		</div>
+	    	</div>
+		</div>
+
+    </div> <!-- END #hostContainer -->
+    <div id="carouselContainer">
+    	<div id="carouselContent" class="container">
+			<div id="this-carousel-id" class="carousel slide">
+			  <div class="carousel-inner">
+			    <div class="item active">
+			      <a class="fancybox-media" rel="gallery1" href="//www.youtube.com/embed/cde5VFNLLlU?list=PLkPIhQnN7cN47pgMpqmhKiRW8DkQTqXZo"><img src="images/video-carousel1.jpg" alt="" /></a>
+			    </div>
+<!-- 			    <div class="item">
+			      <a class="fancybox-media" rel="gallery1" href="//www.youtube.com/embed/Fy1r6tP6hT8?list=PLkPIhQnN7cN47pgMpqmhKiRW8DkQTqXZo"><img src="images/video-carousel2.jpg" alt="" /></a>
+			    </div>
+ -->			    <div class="item">
+			      <a class="fancybox-media" rel="gallery1" href="//www.youtube.com/embed/SXl-krlLoxg?list=PLkPIhQnN7cN47pgMpqmhKiRW8DkQTqXZo"><img src="images/video-carousel3.jpg" alt="" /></a>
+			    </div>
+			  </div><!-- /.carousel-inner -->
+			  <!--  Next and Previous controls below
+			        href values must reference the id for this carousel -->
+			<!-- Controls -->
+			  <a class="left carousel-control" href="#this-carousel-id" data-slide="prev">
+			    <p class="p-left hidden-xs">Check out The Michael J. Fox Show</p>
+			    <span class="icon-prev"></span>
+			  </a>
+			  <a class="right carousel-control" href="#this-carousel-id" data-slide="next">
+			    <p class="p-right hidden-xs">Browse clips of the show airing on NBC Thursdays 9/8c</p>
+			    <span class="icon-next"></span>
+			  </a>			</div><!-- /.carousel -->
+			</div>
+			    	</div>
+    </div> <!-- END #carouselContainer -->
+
+
+    <div id="manifestoContainer">
+    	<div id="manifesto" class="container">
+    		<h2>What we believe</h2>
+    		<!--<p class="manifesto1">There are two kinds of people in this world:</p>
+    		<p class="manifesto2">those who focus on what they can't do and those who focus on what they can.</p>-->
+    		<p class="manifesto3">Our challenges don't define us.<br/><strong>Our actions do.</strong></p>
+    		<p class="manifestoBrand"><img src="images/logo_man.png">
+    		<div class="manSharing">
+    			<p><small>Share this message</small></p>
+    			<ul class="list-inline">
+    				<li><a class="popup" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/photo.php?fbid=10151847422698540&set=pb.135341373539.-2207520000.1379000877.&type=3&theater"><img src="images/man_fb.png" alt="share on facebook"/></a></li>
+    				<li><a class="popup" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fwww.michaeljfox.org%2Fthinkable&text=I%20support%20%40MichaelJFoxOrg%E2%80%99s%20%23ThinkAble%20project%20because%20I%20agree%3A%20http%3A%2F%2Ftinyurl.com%2Fll5ft5o%0A"><img src="images/man_tw.png" alt="tweet this"/></a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
+
+    <div id="aboutContainer">
+    	<div id="about" class="container">
+    		<div id="aboutLogo" class="row text-center">
+    			<img src="images/mjffLogo.png">
+    		</div>
+    		<div id="aboutContent" class="row text-center">
+    			<h2>About The Michael J. Fox Foundation	for Parkinson's Research</h2>
+    			<p>We're dedicated to finding a cure for Parkinson's disease and ensuring the development of improved therapies for those living with Parkinson's today.  We bring the best minds around the world and the Parkinson's community together with an innovative approach to research to put a cure in sight.</p>
+    			<p><strong>Watch the video to learn about the Foundation</strong></p>
+    		</div>
+    		<div id="video" class="row text-center">
+    			<a href="http://www.youtube.com/watch?v=SmfnlAD3Rek&feature=c4-overview-vl&list=PL036510FABEE3D4F2" class="videoLink fancybox-media"><img src="images/aboutVideo.png"></a>
+    			<p><a href="https://www.michaeljfox.org/" target="_blank">www.michaeljfox.org</a></p>
+    		</div>
+    	</div>
+    </div>
+    <div id="footerContainer">
+    	<div id="footer" class="container">
+    		<div class="logo text-center"><a href="javascript:;" onclick="scrollToElement('#introContainer');"><img src="images/footerLogo.png"></a></div>
+    		<p class="text-center"><small>Copyright &copy;2013 The Michael J. Fox Foundation.   <a href="https://www.michaeljfox.org/privacy-policy.html">Privacy Policy</a>  |  <a  href="https://www.michaeljfox.org/terms-and-conditions.html">Terms & Conditions</a>  |  <a href="https://www.michaeljfox.org/page.html?sitemap">Sitemap</a>
+    		</small></p>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.customSelect.min.js"></script>
+    <script type="text/javascript" src="js/luminateExtend.js"></script>
+    <script type="text/javascript" src="js/thinkable-forms.js"></script>
+    <script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js"></script>
+    <script type="text/javascript" src="js/jquery.popupWindow.js"></script>
+    <script type="text/javascript" src="js/waypoints.min.js"></script>
+    <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+    <script src="https://www.youtube.com/player_api"></script>
+
+
+
+    <script type="text/javascript">
+	  $(document).ready(function(){
+	    // initiate carousel
+	    $('.carousel').carousel({
+		  interval: false
+		})
+
+	    // set random background image for intro container
+	    var images = ['bg1.jpg','bg2.jpg','bg3.jpg','bg4.jpg','bg5.jpg','bg6.jpg','bg7.jpg','bg8.jpg','bg9.jpg'];
+		$('#introContainer').css({'background-image':'url(images/'+images[Math.floor(Math.random()*images.length)]+')'});
+
+		$('#navContainer').affix({
+	      offset: {
+	        top: 450
+	      }
+	  	});
+
+	  	// initiate select box style
+	  	$('#msgSelect').customSelect();
+	  	$('#hostSelect').customSelect();
+
+	  	// initiate scrollspy
+	  	$('#navbar').scrollspy();
+
+	  	// hide/show join form
+	  	var $div = $('#joinForm');
+		var height = $div.height();
+		$div.hide().css({ height : 0 });
+
+		$('#joinLink').click(function () {
+		  if ( $div.is(':visible') ) {
+		    $div.animate({ height: 0 }, { duration: 200, complete: function () {
+		        $div.hide();
+		      }
+		    });
+		  } else {
+		    $div.show().animate({ height : height }, { duration: 200 });
+		  }
+
+		  return false;
+		});
+
+		// fancybox
+
+		$('.fancybox-media').fancybox({
+			openEffect  : 'none',
+			closeEffect : 'none',
+			helpers : {
+				media : {}
+			}
+		});
+
+		// waypoint
+
+		$('#intro').waypoint(function() {
+			$('.nav a').removeClass();
+		}, { offset: 0 });
+
+		$('#aboutContainer').waypoint(function() {
+			$('.nav a').removeClass();
+			$('#navAboutLink').addClass('highlight');
+		}, { offset: 200 });
+
+		$('#action').waypoint(function() {
+			$('.nav a').removeClass();
+			$('#navActionLink').addClass('highlight');
+		}, { offset: 240 });
+
+		$('#participate').waypoint(function() {
+			$('.nav a').removeClass();
+			$('#navPartLink').addClass('highlight');
+		}, { offset: 200 });
+
+		$('#hostContainer').waypoint(function() {
+			$('.nav a').removeClass();
+			$('#navHostLink').addClass('highlight');
+		}, { offset: 200 });
+
+		$('#manifestoContainer').waypoint(function() {
+			$('.nav a').removeClass();
+			$('#navManLink').addClass('highlight');
+		}, { offset: 200 });
+
+		// placeholder
+
+		$('input, textarea').placeholder();
+
+	  });
+	</script>
+	<script type="text/javascript">
+		function scrollToElement( target ) {
+		    var topoffset = 100;
+		    var speed = 800;
+		    var destination = $( target ).offset().top - topoffset;
+		    $( 'html:not(:animated),body:not(:animated)' ).animate( { scrollTop: destination}, speed, function() {
+		        window.location.hash = target;
+		    });
+		    return false;
+		}
+	</script>
+
+	<script type="text/javascript">
+	//Popup Script for twitter
+
+	$('.popup').popupWindow({
+		height:300,
+		width:600,
+		centerScreen:1
+	});
+	</script>
+	<script type="text/javascript">
+	//Facebook Sharing
+
+	/* SHARING REPLACED BY PHOTOS */
+	/*
+	function sharePromo1_prompt()
+	{
+
+		FB.ui(
+		  {
+		   method: 'feed',
+		   name: 'Celebrate Michael J. Fox\'s return to TV.',
+		   caption: 'www.michaeljfox.org/thinkable',
+		   description: '#MichaelJFox\'s return to TV reminds us: Our challenges don\'t define us. Our actions do. #ThinkAble bit.ly/ThinkAble',
+		   link: 'www.michaeljfox.org/thinkable#participate',
+		   picture: 'http://www2.michaeljfox.org/images/mjff_FB.jpg'
+		  }
+		)
+	}
+
+	function sharePromo2_prompt()
+	{
+
+		FB.ui(
+		  {
+		   method: 'feed',
+		   name: 'Celebrate Michael J. Fox\'s return to TV.',
+		   caption: 'www.michaeljfox.org/thinkable',
+		   description: '94% of U.S. adults think their outlook affects their health. Together we\'ll make Parkinson\'s cure/able if we #ThinkAble bit.ly/ThinkAble',
+		   link: 'www.michaeljfox.org/thinkable#participate',
+		   picture: 'http://www2.michaeljfox.org/images/mjff_FB.jpg'
+		  }
+		)
+	}
+
+	function sharePromo3_prompt()
+	{
+
+		FB.ui(
+		  {
+		   method: 'feed',
+		   name: 'Celebrate Michael J. Fox\'s return to TV.',
+		   caption: 'www.michaeljfox.org/thinkable',
+		   description: 'I got to a place where all signs said stop and just thought... why stop? -#MichaelJFox reminding us to always #ThinkAble bit.ly/ThinkAble',
+		   link: 'www.michaeljfox.org/thinkable#participate',
+		   picture: 'http://www2.michaeljfox.org/images/mjff_FB.jpg'
+		  }
+		)
+	}
+	*/
+	function shareMsgPrompt()
+	{
+
+	FB.ui(
+	  {
+	   method: 'feed',
+	   name: 'Send a Message to Michael J. Fox',
+	   caption: 'www.michaeljfox.org/thinkable',
+	   description: 'Michael\'s return to television reminds us of the power of optimism and action for achieving greatness. Show Michael you share this belief by signing a book being delivered to him on Nov 9th.',
+	   link: 'www.michaeljfox.org/thinkable#action',
+	   picture: 'http://www2.michaeljfox.org/images/mjff_FB.jpg'
+	  }
+	)
+
+	}
+
+	/*$('#promo1').click(sharePromo1_prompt);
+	$('#promo2').click(sharePromo2_prompt);
+	$('#promo3').click(sharePromo3_prompt);*/
+	$('#msgThanksFB').click(shareMsgPrompt);
+
+
+	</script>
+
+	<script type="text/javascript">
+	// GET AND DISPLAY SURVEY NUMBERS
+		$.ajax({
+		  dataType: 'jsonp',
+		  success: function(data) {
+		    numResponses = $(data.results).find('p:eq(1)').html();
+		    digitsArr = numResponses.split("");
+		    $("#partyCounter").prepend('<span class="digit">' + digitsArr[0] + '</span><span class="digit">' + digitsArr[1] + '</span><span class="digit">' + digitsArr[2] + '</span><span class="digit">' + digitsArr[3] + '</span>');
+		  },
+		  url: 'http://www2.michaeljfox.org/site/PageServer?pagename=getSurveyResults&pgwrap=n&survey_id=3061&question_id=3480&callback=?'
+		});
+
+		$.ajax({
+		  dataType: 'jsonp',
+		  success: function(data) {
+		    numResponses = $(data.results).find('p:eq(1)').html();
+		    $('#msgCounterNum').prepend(numResponses);
+		  },
+		  url: 'http://www2.michaeljfox.org/site/PageServer?pagename=getSurveyResults&pgwrap=n&survey_id=3121&question_id=3560&callback=?'
+		});
+	</script>
+
+
+	<script type="text/javascript">
+	   var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-1794727-1']);
+	  _gaq.push(['_setDomainName', 'michaeljfox.org']);
+	  _gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+
+  </body>
+</html>

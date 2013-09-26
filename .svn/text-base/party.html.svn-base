@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>think/able</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="The Michael J. Fox Foundation - Thinkable"/>
+	<meta property="og:image" content="http://www2.michaeljfox.org/images/mjff_FB.jpg"/>
+	<meta property="og:url" content="http://www2.michaeljfox.org/site/PageNavigator/ThinkAble_PremiereParty.html"/>
+	<meta property="og:site_name" content="The Michael J. Fox Foundation - Think/Able"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:description" content="On Thursday, September 26, Michael returns to television on NBC's The Michael J. Fox Show. To celebrate we're inviting people across the country to throw a premiere party." />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/thinkable-styles.css" rel="stylesheet" media="screen">
+	<link href="fancybox/fancybox.css" rel="stylesheet">
+	<style>
+		.activityAnchor {
+			height:100%;
+			width:100%;
+			display:block;
+		}
+		.activityAnchor:hover {
+			text-decoration: underline;
+		}
+
+	</style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+	<script>
+	  WebFont.load({
+	    google: {
+	      families: ['Roboto']
+	    }
+	  });
+	</script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+
+    <div id="introContainer">
+
+    	<div id="intro" class="container">
+    		<div id="introBranding" class="row">
+	    		<a href="https://www.michaeljfox.org/thinkableLanding/thinkable.html">
+	    			<div id="logo" class="col-xs-12 col-md-3"><img src="images/logoIntro.png"></div>
+	    		</a>
+	    		<div style="color:#ccc;" id="tagline" class="col-xs-12 col-md-4 col-md-offset-5"><small><a style="color:#ccc; text-decoration:none;"href="https://www.michaeljfox.org">A project of The Michael J. Fox Foundation <img src="https://www.michaeljfox.org/files/MJFF_Fox_R_Logo%20GREY.jpeg" height="17" width="39"></a></small></div>
+    		</div>
+
+    	</div>
+
+
+
+
+    </div>
+
+    <div id="convoContainer">
+    	<div id="convo" class="container" style="padding:0 1em;">
+    		<div id="convoHead" class="row">
+    			<h2>Throwing a Great Premiere Party</h2>
+    			<p class="subHead" style="margin-top:1em;">Thank you for hosting a premiere party for "The Michael J. Fox Show" on September 26. We're excited to have you join us in welcoming Michael back to TV and wanted to provide you with some tools for making your party a success- Have fun!</p>
+    		</div>
+
+    	</div>
+    </div>
+    <div style="padding: 2em 1em;">
+    	<div id="host" class="container">
+	    	<div class="row">
+	    		<div id="hostFormContent" class="col-xs-12 col-md-6">
+	    			<h2>Party Planner</h2>
+	    			<p>
+	    				The planner is a step-by-step guide to make your party a success.
+	    			</p>
+
+	    				    				<div class="row">
+	    					<div class="col-xs-12">
+	    						<a href="https://www.michaeljfox.org/files/Premiere-Party-Planner2.pdf" target="blank"  class="redBtn">Step-by-Step Guide<span class="glyphicon glyphicon-chevron-right"></span></a>
+	    					</div>
+
+	    				</div>
+	    				<div class="row">
+	    					<div class="col-xs-12">
+	    						<a href="https://www.michaeljfox.org/files/MJFF_party_00_booklet.pdf" target="blank"  class="redBtn" style="margin-top:1em;">Download the Full Party Planner<span class="glyphicon glyphicon-chevron-right"></span></a>
+	    					</div>
+	    				</div>
+	    		</div>
+
+
+				<div class="col-xs-12 col-md-6">
+	    			<h2>Party Activities</h2>
+
+	    		<div class="row">
+		    		<div class="col-md-6">
+						<a href="http://www2.michaeljfox.org/site/MessageViewer?em_id=7141.0&dlv_id=0" target="_blank" class="activityAnchor"><img src="https://www.michaeljfox.org/files/Invitation.jpg" style="width:50px;" />
+		    			Party Invitation<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+
+		    		<div class="col-md-6">
+						<a href="https://www.michaeljfox.org/files/MJFF_party_09_bingo.pdf" target="_blank" class="activityAnchor"><img src="https://www.michaeljfox.org/files/Bingo.jpg" style="width:50px;" />Bingo<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+
+
+		    		<div class="col-md-6">
+		    			<a href="https://www.michaeljfox.org/files/MJFF_party_01_letter.pdf" target="_blank" class="activityAnchor"><img src="https://www.michaeljfox.org/files/MichaelLetter.jpg" style="width:50px;" />
+		    			Message from Michael<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+		    		<div class="col-md-6">
+		    			<a href="https://www.michaeljfox.org/page.html?id=75" target="_blank" class="activityAnchor"><img src="https://www.michaeljfox.org/files/Music.jpg" style="width:50px;" />
+
+
+		    			Sam Fox's Playlist<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+		    		<div class="col-md-6">
+		    			<a href="https://www.michaeljfox.org/files/MJFF_party_05_recipes.pdf" target="_blank" class="activityAnchor"><img src="https://www.michaeljfox.org/files/Recipes.jpg" style="width:50px;" />
+		    			Tracy Pollan's Recipes<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+		    		<div class="col-md-6">
+						<a href="https://www.michaeljfox.org/files/MJFF_party_07_trivia.pdf" target="_blank" class="activityAnchor"><img src="https://www.michaeljfox.org/files/Trivia%20Game.jpg" style="width:50px;" />
+		    			Trivia Game<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+
+		    		<div class="col-md-6">
+		    			<a href="http://shop.michaeljfox.org/" target="_blank" class="activityAnchor">
+		    				<div style="height:50px; width:50px; text-align:center; display:inline-block;">
+		    				<img src="https://www.michaeljfox.org/files/fox-shop-web.jpg" style="width:40px;" />
+		    			</div>
+		    			Shop Fox<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+		    		<div class="col-md-6">
+						<a href="https://www.michaeljfox.org/page.html?Premiere-Party-Instructions" class="activityAnchor">
+						<div style="height:50px; width:50px; text-align:center; display:inline-block;">
+						<img src="https://www.michaeljfox.org/files/teamfox-web.jpg" style="width:35px; margin-top:5px;" />
+						</div>
+		    			Team Fox Fundraising<span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+
+				</div>
+
+
+
+	    		</div>
+
+	    	</div>
+		</div>
+
+    </div> <!-- END #hostContainer -->
+
+    </div> <!-- END #carouselContainer -->
+
+
+
+
+
+    <div id="footerContainer">
+    	<div id="footer" class="container" style="padding:4em 1em;">
+    		<div class="logo text-center">
+			<a href="https://www.michaeljfox.org/thinkableLanding/thinkable.html">
+    			<img src="images/footerLogo.png"></div>
+    		</a>
+    		<p class="text-center"><small>Copyright &copy;2013 The Michael J. Fox Foundation.   <a href="">Privacy Policy</a>  |  <a  href="">Terms & Conditions</a>  |  <a href="">Sitemap</a>
+    		</small></p>
+    </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.customSelect.min.js"></script>
+
+
+  </body>
+</html>
